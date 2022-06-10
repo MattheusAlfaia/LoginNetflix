@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="imagens/logonetflix.png" />
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <title>Netflix</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="background"></div>
+        <div class="logo">
+            <img src="imagens/netflix-logo.png"/>
+        </div>
+
+        <div class="box">
+            <div class="box-login">
+                <span class="entrar">Entrar</span>
+
+                <div class="box-login-form">
+                    <form method="POST">
+
+                        <div class="group">
+                            <input required="" type="text" class="input">
+                            <span class="bar"></span>
+                            <label> Email ou número de telefone</label>
+                        </div>
+
+                        <div class="group">
+                            <input required="" type="password" class="input" id="senha">
+                            <a id="mostrar" type="button" onclick="mostrarSenha()">MOSTRAR</a>
+                            <span class="bar"></span>
+                            <label> Senha</label>
+                        </div>
+                            
+                        <button id="bte" >Entrar</button>
+
+                        <div class="checkbox">
+                            <input type="checkbox" id="chk1" class="checkbox" name="chk">
+                            <label for="chk1">Lembre-se de mim</label>
+                        </div>
+                    
+                       <div class="ajuda">
+                           <a>Precisa de ajuda?</a>
+                       </div>
+
+                       <div class="assinar">
+                            <span>Novo por aqui?</span>
+                            <a href="#">Assine agora</a>.
+                       </div>
+                       
+                       <div class="saiba">
+                           <span>Esta página é protegida pelo Google reCAPTCHA para garantir que você não é um robô.</span>
+                           <a href="#">Saiba mais.</a>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+		<script>
+			function mostrarSenha(){
+				var tipo = document.getElementById("senha");
+				if(tipo.type == "password"){
+					tipo.type = "text";
+				}else{
+					tipo.type = "password";
+				}
+			}
+
+            $('.group').mouseover(function(){
+            $('#mostrar').css('display', 'block');
+            });
+
+            $('.group').mouseout(function(){
+            $('#mostrar').css('display', 'none');
+            });
+		</script>
+</body>
+</html>
